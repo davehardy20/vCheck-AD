@@ -2,10 +2,11 @@
 # End of Settings
 import-module activedirectory -ErrorAction SilentlyContinue
 
-get-aduser -Filter {admincount -gt 0} -Properties adminCount -ResultSetSize $null
+get-aduser -Filter {admincount -gt 0} -Properties adminCount -ResultSetSize $null | Select-Object SAMAccountName, Name
+
 
 $Title = "AdminSDHolder"
-$Header =  "Domain User wu=ith the AdminSDHolder flag set"
+$Header =  "[count] Domain Users with the AdminSDHolder flag set"
 $Comments = "List Users with the AdminSDHolder flag set"
 $Display = "Table"
 $Author = "Dave Hardy"

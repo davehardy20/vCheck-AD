@@ -5,7 +5,7 @@ Get-ADGroupMember -identity "Domain Admins" | select SAMAccountName, Name | Sort
 
 $Title = "Domain Admins Group"
 $Header =  "Domain Admins Group Members"
-$Comments = "List Current Domain Admins"
+$Comments = "[count] List Current Domain Admins"
 $Display = "Table"
 $Author = "Eric Shanks"
 $Version = 1.0
